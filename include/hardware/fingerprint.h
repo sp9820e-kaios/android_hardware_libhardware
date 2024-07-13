@@ -148,6 +148,31 @@ typedef struct fingerprint_device {
      */
     uint64_t (*pre_enroll)(struct fingerprint_device *dev);
 
+    // Add by silead begin
+    int32_t (*setFPScreenStatus)(int32_t screenStatus);
+    int32_t (*setFPEnableCredential)(int32_t index, int32_t enable);
+    int32_t (*getFPEnableCredential)(int32_t index);
+    int32_t (*getFPVirtualKeyCode)();
+    int32_t (*setFPVirtualKeyCode)(int virtualKeyCode);
+    int32_t (*getFPLongPressVirtualKeyCode)();
+    int32_t (*setFPLongPressVirtualKeyCode)(int virtualKeyCode);
+    int32_t (*getFPDouClickVirtualKeyCode)();
+    int32_t (*setFPDouClickVirtualKeyCode)(int virtualKeyCode);
+    int32_t (*getFPVirtualKeyState)();
+    int32_t (*setFPVirtualKeyState)(int virtualKeyState);
+    int32_t (*getFPWakeUpState)();
+    int32_t (*setFPWakeUpState)(int wakeUpState);
+    int32_t (*getFingerPrintState)();
+    int32_t (*setFingerPrintState)(int32_t fingerPrintState);
+    int32_t (*setFPPowerFuncKeyState)(int32_t funcKeyState);
+    int32_t (*getFPPowerFuncKeyState)();
+    int32_t (*setFPIdleFuncKeyState)(int32_t funcKeyState);
+    int32_t (*getFPIdleFuncKeyState)();
+    int32_t (*setFPWholeFuncKeyState)(int funcKeyState);
+    int32_t (*setFPFunctionKeyState)(int32_t index, int32_t enable);
+    int32_t (*getFPFunctionKeyState)(int32_t index);
+    // Add by silead end
+
     /*
      * Fingerprint enroll request:
      * Switches the HAL state machine to collect and store a new fingerprint

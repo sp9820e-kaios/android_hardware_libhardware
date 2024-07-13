@@ -192,6 +192,9 @@ enum {
      */
     HWC_DISPLAY_DPI_X                       = 4,
     HWC_DISPLAY_DPI_Y                       = 5,
+#ifdef GET_FRAMEBUFFER_FORMAT_FROM_HWC
+    HWC_DISPLAY_FBFORMAT                    = 7,
+#endif
 };
 
 /* Allowed events for hwc_methods::eventControl() */

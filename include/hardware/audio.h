@@ -121,6 +121,7 @@ __BEGIN_DECLS
  *  audio stream parameters
  */
 
+#define AUDIO_PARAMETER_STREAM_VIB_STATUS "vib_status"
 #define AUDIO_PARAMETER_STREAM_ROUTING "routing"             /* audio_devices_t */
 #define AUDIO_PARAMETER_STREAM_FORMAT "format"               /* audio_format_t */
 #define AUDIO_PARAMETER_STREAM_CHANNELS "channels"           /* audio_channel_mask_t */

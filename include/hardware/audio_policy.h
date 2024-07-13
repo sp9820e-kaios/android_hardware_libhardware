@@ -233,6 +233,9 @@ struct audio_policy {
             audio_stream_type_t stream,
             uint32_t in_past_ms);
 
+    /** SPRD Checks whether audio recording is going in AudioFlinger */
+    bool (*is_audio_recording)(const struct audio_policy *pol);
+
     bool (*is_stream_active_remotely)(const struct audio_policy *pol,
             audio_stream_type_t stream,
             uint32_t in_past_ms);

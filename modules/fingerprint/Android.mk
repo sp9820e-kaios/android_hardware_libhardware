@@ -18,7 +18,18 @@ include $(CLEAR_VARS)
 
 LOCAL_MODULE := fingerprint.default
 LOCAL_MODULE_RELATIVE_PATH := hw
-LOCAL_SRC_FILES := fingerprint.c
+
+# Modified by silead begin
+#LOCAL_SRC_FILES := fingerprint.c
+LOCAL_SRC_FILES := fingerprint.cpp
+# Modified by silead end
+
+# Add by silead begin
+LOCAL_SRC_FILES += ainffpsvcfpapkrelayerCB.cpp SileadFingerprint.cpp
+LOCAL_STATIC_LIBRARIES := libfpsvcd_remoteapi libslbase
+LOCAL_STATIC_LIBRARIES  +=libfpfslockd_remoteapi libalog libaslxml libslos
+# Add by silead end
+
 LOCAL_SHARED_LIBRARIES := liblog
 LOCAL_MODULE_TAGS := optional
 
